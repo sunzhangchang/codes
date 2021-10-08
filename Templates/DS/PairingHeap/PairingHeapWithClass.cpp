@@ -30,6 +30,8 @@ public:
 
 	pairing_heap(const pairing_heap&o):cmp(o.cmp),_root(o._root),_size(o._size) {}
 
+	~pairing_heap() { destroy(); }
+
 	iterator push(const T&);
 
 	iterator merge(const pairing_heap&);
